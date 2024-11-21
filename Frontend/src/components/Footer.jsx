@@ -1,5 +1,4 @@
 import React from "react";
-import { MdOutlineEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -12,7 +11,7 @@ const Footer = () => {
       <div className="bg-blue-950 bg-opacity-50 rounded-t-lg flex justify-between space-x-2 px-4 py-6">
         <div>
           Designed and built by{" "}
-          <span className="text-yellow-500 font-semibold">CodeShark🦈</span>
+          <span className="text-yellow-500 text-lg font-bold">CodeShark🦈</span>
         </div>
         <div className="flex space-x-4 text-gray-200 text-lg">
           <a

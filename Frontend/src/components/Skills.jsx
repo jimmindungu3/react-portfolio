@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="px-4 mb-36 mt-36 text-gray-200 max-w-96 mx-auto rounded-md md:max-w-6xl md:mb-16">
+    <div className=" mb-36 mt-36 text-gray-200 max-w-96 mx-auto rounded-md md:max-w-6xl md:mb-16">
       <div>
         <h1 className="mb-8 text-gray-200 font-bold text-center text-2xl">
           Skills and Tools

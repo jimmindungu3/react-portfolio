@@ -8,6 +8,7 @@ import sharkImage from "./assets/shark.jpg";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import Message from "./components/Message";
+import Education from "./components/Education";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -39,6 +40,7 @@ function App() {
         <Services />
         <Projects />
         <Skills />
+        <Education />
         <Message />
         <Footer />
       </div>
