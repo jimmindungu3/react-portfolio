@@ -10,10 +10,7 @@ const password = process.env.GMAIL_APP_PASSWORD;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Home/test route
-app.get("/", (req, res)=>{
-    res.status(200).send("server up")
-})
+app.get("/", (req, res) => res.status(200).send("Home"));
 
 // Hire me route
 app.post("/hire-me", async (req, res) => {
