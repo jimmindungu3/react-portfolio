@@ -18,7 +18,7 @@ const Education = () => {
               Bachelor's Degree
             </h2>
             <p className='text-gray-50 flex-grow'>
-              I completed a Bachelor's degree in <span className='font-semibold text-bronze'>Cyber security</span> and <span className='font-semibold text-bronze'>Software development</span>, which provided me with a solid foundation in both cybersecurity and software development. My education focused on the analysis of digital systems, network security, and data protection techniques.
+              I completed a Bachelor's degree in <span className='font-semibold text-bronze'>Computer Security And Forensics</span> which provided me with a solid foundation in both <span className='font-semibold text-bronze'>Cybersecurity</span> and <span className='font-semibold text-bronze'>Software Development</span>. My education focused on the analysis of digital systems, network security, and data protection techniques.
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ const Education = () => {
               Certification in Software Engineering
             </h2>
             <p className='text-gray-50 flex-grow'>
-              I earned a Software Engineering certification from Moringa School, where I gained practical experience in full-stack web development, working with technologies like <span className='font-semibold text-yellow-500'>React</span>, <span className='font-semibold text-yellow-500'>Flask</span>, and <span className='font-semibold text-yellow-500'>SQL Databases</span>. This certification strengthened my technical skills and industry readiness.
+              I earned a <span className='font-semibold text-yellow-500'>Software Engineering</span> certification from Moringa School, where I gained practical experience in full-stack web development, working with technologies like <span className='font-semibold text-yellow-500'>React</span>, <span className='font-semibold text-yellow-500'>Flask</span>, and <span className='font-semibold text-yellow-500'>SQL</span>. This certification strengthened my technical skills and industry readiness.
             </p>
           </div>
         </div>
