@@ -5,7 +5,7 @@ const Message = () => {
     <div className="max-w-96 md:max-w-6xl mx-auto mb-12">
       <div className="border border-blue-900 border-opacity-80 w-full md:max-w-full rounded-lg bg-blue-950 bg-opacity-50 p-4 pb-8">
         <h1 className="pt-4 font-bold text-2xl text-center text-yellow-500 mb-4">
-          Leave a Message
+          Hire Me
         </h1>
         <form>
           <div className="flex flex-col space-y-1 mb-4">
@@ -17,6 +17,17 @@ const Message = () => {
               type="text"
               name="name"
               placeholder="John Doe"
+            />
+          </div>
+          <div className="flex flex-col space-y-1 mb-4">
+            <label className="px-2 text-white font-semibold" htmlFor="phone">
+              Phone
+            </label>
+            <input
+              className="px-2 rounded-md py-2 bg-gray-300 focus:outline focus:outline-bronze focus:outline-2"
+              type="tel"
+              name="phone"
+              placeholder="0712345678"
             />
           </div>
           <div className="flex flex-col space-y-1 mb-4">
