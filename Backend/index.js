@@ -8,7 +8,7 @@ const PORT = 8000;
 
 app.use(
   cors({
-    origin: ["http://localhost:5174"],
+    origin: ["http://localhost:5174", "https://codeshark-portfolio.vercel.app"],
   })
 );
 
