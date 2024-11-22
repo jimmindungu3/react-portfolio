@@ -8,9 +8,15 @@ const PORT = 8000;
 
 app.use(
   cors({
-    origin: ["http://localhost:5174", "https://codeshark-portfolio.vercel.app"],
+    origin: [
+      "http://localhost:5174", 
+      "https://codeshark-portfolio.vercel.app", 
+    ],
+    methods: ["GET", "POST",],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"], 
   })
 );
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
