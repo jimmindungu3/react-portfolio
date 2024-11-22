@@ -3,26 +3,23 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 require("dotenv").config();
 
-
-const corsOptions = {
-  origin: ["https://codeshark-portfolio.vercel.app", "http://localhost:5173"],
-  credentials: true,
-};
-
 const app = express();
-app.use(cors(corsOptions));
 const PORT = 8000;
-const password = process.env.GMAIL_APP_PASSWORD;
 
-// Middleware to parse form data
+app.use(
+  cors({
+    origin: ["http://localhost:5174"],
+  })
+);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => res.status(200).send("Home on Vercel"));
+app.get("/", (req, res) => res.status(200).send("Home"));
 
 // Hire me route
 app.post("/hire-me", async (req, res) => {
-  const { name, phone, email, subject, message } = req.body;
+  const { name, email, message } = req.body;
 
   // Configure SMTP transporter
   const transporter = nodemailer.createTransport({
@@ -31,7 +28,7 @@ app.post("/hire-me", async (req, res) => {
     secure: true,
     auth: {
       user: "jimmindungu3@gmail.com",
-      pass: password,
+      pass: process.env.GMAIL_APP_PASSWORD,
     },
   });
 
@@ -39,8 +36,7 @@ app.post("/hire-me", async (req, res) => {
   const mailOptions = {
     from: `Portfolio Contact Form <jimmindungu3@gmail.com>`,
     to: "jimmindungu3@gmail.com",
-    subject: subject || "No Subject",
-    text: `Message from ${name} - ${phone}:\n\n${message}\n\n\n\n${email}`,
+    text: `Message from ${name}\n\n${message}\n\n${email}`,
     replyTo: email,
   };
 
