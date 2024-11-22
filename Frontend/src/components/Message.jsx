@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Message = () => {
@@ -10,6 +10,26 @@ const Message = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    const wakeUpServer = async () => {
+      try {
+        await axios.get("https://gmailer-ecmm.onrender.com");
+        console.log("Render server woken up");
+      } catch (err) {
+        console.error("Error waking up server:", err);
+      }
+    };
+
+    // Ping the server every 5 minutes
+    const interval = setInterval(wakeUpServer, 5 * 60 * 1000);
+
+    // Initial wake-up call
+    wakeUpServer();
+
+    // Cleanup on component unmount
+    return () => clearInterval(interval);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,9 +54,8 @@ const Message = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/hire-me",
-        formData,
-        // { withCredentials: true }
+        "https://gmailer-ecmm.onrender.com/hire-me",
+        formData
       );
 
       if (response.status === 200) {
@@ -62,7 +81,7 @@ const Message = () => {
     <div className="max-w-96 md:max-w-4xl mx-auto mb-12">
       <div className="border border-blue-900 border-opacity-80 w-full rounded-lg bg-blue-950 bg-opacity-50 p-4 pb-8">
         <h1 className="pt-4 font-bold text-2xl text-center text-yellow-500 mb-4">
-          Leave a Message
+          Hire Me
         </h1>
 
         {success && (
