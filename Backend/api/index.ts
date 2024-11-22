@@ -3,8 +3,14 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 require("dotenv").config();
 
+
+const corsOptions = {
+  origin: "https://codeshark-portfolio.vercel.app/",
+  credentials: true,
+};
+
 const app = express();
-app.use(cors())
+app.use(cors(corsOptions));
 const PORT = 8000;
 const password = process.env.GMAIL_APP_PASSWORD;
 
