@@ -10,7 +10,7 @@ const password = process.env.GMAIL_APP_PASSWORD;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => res.status(200).send("Home"));
+app.get("/", (req, res) => res.status(200).send("Home on Vercel"));
 
 // Hire me route
 app.post("/hire-me", async (req, res) => {
@@ -55,3 +55,5 @@ app.post("/hire-me", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+module.exports = app;
