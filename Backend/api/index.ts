@@ -5,7 +5,7 @@ require("dotenv").config();
 
 
 const corsOptions = {
-  origin: ["https://codeshark-portfolio.vercel.app/", "http://localhost:5173"],
+  origin: ["https://codeshark-portfolio.vercel.app", "http://localhost:5173"],
   credentials: true,
 };
 
