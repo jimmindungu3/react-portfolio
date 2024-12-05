@@ -11,20 +11,20 @@ import Message from "./components/Message";
 import Education from "./components/Education";
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  // const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+  // useEffect(() => {
+  //   if (theme === "dark") {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  //   localStorage.setItem("theme", theme);
+  // }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  // const toggleTheme = () => {
+  //   setTheme(theme === "dark" ? "light" : "dark");
+  // };
 
   return (
     <div className="relative">
@@ -35,7 +35,7 @@ function App() {
         <div className="absolute inset-0 bg-black opacity-60" />
       </div>
       <div className="relative z-10">
-        <Navbar toggleTheme={toggleTheme} theme={theme} />
+        <Navbar />
         <Hero />
         <Services />
         <Projects />
