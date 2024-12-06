@@ -78,85 +78,93 @@ const Message = () => {
   };
 
   return (
-    <div className="max-w-96 md:max-w-4xl mx-auto mb-12">
-      <div className="border border-blue-900 border-opacity-80 w-full rounded-lg bg-blue-950 bg-opacity-50 p-4 pb-8">
-        <h1 className="pt-4 font-bold text-2xl text-center text-yellow-500 mb-4">
-          Hire Me
-        </h1>
+    <div className="mx-4  mb-12">
+      <div className="max-w-96 md:max-w-6xl mx-auto">
+        <div className="border border-blue-900 border-opacity-80 w-full rounded-lg bg-blue-950 bg-opacity-50 p-4 pb-8">
+          <h1 className="pt-4 font-bold text-2xl text-center text-yellow-500 mb-4">
+            Hire Me
+          </h1>
 
-        {success && (
-          <div className="mb-4 p-3 bg-green-100 text-green-700 rounded">
-            Message sent successfully!
-          </div>
-        )}
+          {success && (
+            <div className="mb-4 p-3 bg-green-100 text-green-700 rounded">
+              Message sent successfully!
+            </div>
+          )}
 
-        {error && (
-          <div className="mb-4 p-3 bg-red-100 text-red-700 rounded">
-            {error}
-          </div>
-        )}
+          {error && (
+            <div className="mb-4 p-3 bg-red-100 text-red-700 rounded">
+              {error}
+            </div>
+          )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex flex-col space-y-1">
-            <label className="text-gray-200 px-2 font-semibold" htmlFor="name">
-              Name <span className="text-red-500">*</span>
-            </label>
-            <input
-              required
-              id="name"
-              className="px-2 rounded-md py-2 bg-gray-300 focus:outline focus:outline-yellow-500 focus:outline-2"
-              type="text"
-              name="name"
-              placeholder="John Doe"
-              value={formData.name}
-              onChange={handleChange}
-            />
-          </div>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="flex flex-col space-y-1">
+              <label
+                className="text-gray-200 px-2 font-semibold"
+                htmlFor="name"
+              >
+                Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                required
+                id="name"
+                className="px-2 rounded-md py-2 bg-gray-300 focus:outline focus:outline-yellow-500 focus:outline-2"
+                type="text"
+                name="name"
+                placeholder="John Doe"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className="flex flex-col space-y-1">
-            <label className="px-2 text-white font-semibold" htmlFor="email">
-              Email <span className="text-red-500">*</span>
-            </label>
-            <input
-              required
-              id="email"
-              className="px-2 rounded-md py-2 bg-gray-300 focus:outline focus:outline-yellow-500 focus:outline-2"
-              type="email"
-              name="email"
-              placeholder="email@example.com"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
+            <div className="flex flex-col space-y-1">
+              <label className="px-2 text-white font-semibold" htmlFor="email">
+                Email <span className="text-red-500">*</span>
+              </label>
+              <input
+                required
+                id="email"
+                className="px-2 rounded-md py-2 bg-gray-300 focus:outline focus:outline-yellow-500 focus:outline-2"
+                type="email"
+                name="email"
+                placeholder="email@example.com"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className="flex flex-col space-y-1">
-            <label className="text-white px-2 font-semibold" htmlFor="message">
-              Message <span className="text-red-500">*</span>
-            </label>
-            <textarea
-              required
-              id="message"
-              className="px-2 rounded-md py-2 bg-gray-300 focus:outline focus:outline-yellow-500 focus:outline-2"
-              name="message"
-              rows={4}
-              placeholder="Greetings! I would love to hire you for a web project. Can we have a meeting to discuss more?"
-              value={formData.message}
-              onChange={handleChange}
-            />
-          </div>
+            <div className="flex flex-col space-y-1">
+              <label
+                className="text-white px-2 font-semibold"
+                htmlFor="message"
+              >
+                Message <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                required
+                id="message"
+                className="px-2 rounded-md py-2 bg-gray-300 focus:outline focus:outline-yellow-500 focus:outline-2"
+                name="message"
+                rows={4}
+                placeholder="Greetings! I would love to hire you for a web project. Can we have a meeting to discuss more?"
+                value={formData.message}
+                onChange={handleChange}
+              />
+            </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className={`py-2 px-6 rounded text-lg font-semibold transition-colors ${
-              loading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-yellow-500 hover:bg-gray-200 active:bg-yellow-700 text-black"
-            }`}
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
+            <button
+              type="submit"
+              disabled={loading}
+              className={`py-2 px-6 rounded text-lg font-semibold transition-colors ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-yellow-500 hover:bg-gray-200 active:bg-yellow-700 text-black"
+              }`}
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

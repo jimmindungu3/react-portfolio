@@ -7,8 +7,8 @@ import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="max-w-96 md:max-w-6xl mx-auto text-gray-200">
-      <div className="bg-blue-950 bg-opacity-50 rounded-t-lg flex justify-between space-x-2 px-4 py-6">
+    <div className="bg-blue-950 bg-opacity-50 text-gray-200">
+      <div className="mx-auto max-w-6xl rounded-t-lg flex justify-between space-x-2 px-4 py-6">
         <div>
           Designed and built by{" "}
           <span className="text-yellow-500 text-lg font-bold">CodeShark🦈</span>

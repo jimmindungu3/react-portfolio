@@ -9,9 +9,9 @@ const Education = () => {
       <h1 className='mb-8 text-gray-200 font-bold text-center text-2xl'>
         Education
       </h1>
-      <div className='mx-4 md:grid md:grid-cols-3 md:max-w-6xl md:space-x-6 md:mx-auto md:px-4'> {/* Reduced space here */}
+      <div className='mx-4 md:grid md:grid-cols-3 md:max-w-6xl md:space-x-6 md:mx-auto md:px-4'>
         {/* Degree Card */}
-        <div className='mb-12 max-w-96 mx-auto flex flex-col bg-blue-950 bg-opacity-50 border border-bronze shadow-lg rounded-lg overflow-hidden md:h-full'>
+        <div className=' mb-12 max-w-96 mx-auto flex flex-col bg-blue-950 bg-opacity-50 border border-bronze shadow-lg rounded-lg overflow-hidden md:h-full'>
           <FaGraduationCap className='w-24 h-24 text-bronze mx-auto mt-4' />
           <div className='flex-grow p-4 flex flex-col'>
             <h2 className='text-xl text-center text-bronze font-bold mb-2 md:mb-8'>
