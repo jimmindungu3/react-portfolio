@@ -1,10 +1,10 @@
 import React from "react";
-import passport from "../assets/passport.png";
+import passport from "../assets/pencilpassport.png";
 
 const Hero = () => {
   return (
     <div className="max-w-6xl mx-auto h-screen flex items-center justify-center">
-      <div className="text-center text-gray-200">
+      <div className="mx-4 text-center text-gray-200">
         <img
           className="p-1 mx-auto h-44 rounded-full border border-gray-400 hover:shadow-md hover:shadow-yellow-500"
           src={passport}
