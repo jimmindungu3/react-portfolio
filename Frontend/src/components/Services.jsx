@@ -9,7 +9,7 @@ const Services = () => {
       <h1 className="mb-8 md:mt-24 lg:mt-0 text-gray-200 font-bold text-center text-2xl">
         Services
       </h1>
-      <div className="mx-4 md:grid md:grid-cols-3 md:max-w-6xl md:space-x-6 md:mx-auto md:px-4"> {/* Reduced space here */}
+      <div className="mx-4 md:grid md:grid-cols-3 md:max-w-6xl md:space-x-6 md:mx-auto md:px-4">
         {/* Consultancy Card */}
         <div className="mb-12 max-w-96 mx-auto flex flex-col bg-blue-950 bg-opacity-50 border border-bronze shadow-lg rounded-lg overflow-hidden md:h-full md:mt-36">
           <FaRegLightbulb className="w-24 h-24 text-bronze mx-auto mt-4" />
@@ -18,7 +18,9 @@ const Services = () => {
               Web Consultancy
             </h2>
             <p className="text-gray-50 flex-grow">
-              Elevate your web strategy with expert consultancy. I provide tailored advice to optimize your digital presence, leverage cutting-edge technologies, and drive your web solutions forward.
+              Elevate your web strategy with expert consultancy. I provide
+              tailored advice to optimize your digital presence, leverage
+              cutting-edge technologies, and drive your web solutions forward.
             </p>
           </div>
         </div>
@@ -30,7 +32,9 @@ const Services = () => {
               Web Development
             </h2>
             <p className="text-gray-50 flex-grow">
-              Transform your ideas into powerful web solutions. I specialize in building modern, responsive, and user-friendly websites using the latest technologies. Let's build something amazing together!
+              Transform your ideas into powerful web solutions. I specialize in
+              building modern, responsive, and user-friendly websites using the
+              latest technologies. Let's build something amazing together!
             </p>
           </div>
         </div>
@@ -42,7 +46,11 @@ const Services = () => {
               Web Development Training
             </h2>
             <p className="text-gray-50 flex-grow">
-              Transform your skills into expertise. I offer hands-on, practical web development training to help you build modern, responsive, and user-friendly websites. Master the latest technologies and take your web development journey to the next level. Let's start building your future today!
+              Transform your skills into expertise. I offer hands-on, practical
+              web development training to help you build modern, responsive, and
+              user-friendly websites. Master the latest technologies and take
+              your web development journey to the next level. Let's start
+              building your future today!
             </p>
           </div>
         </div>
